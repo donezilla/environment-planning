@@ -1,0 +1,29 @@
+class CI {
+    constructor(CI_name, tags, relationships){
+        this.CI_name = CI_name;
+        this.tags = tags;
+        this.relationships = relationships;
+    }
+
+    assignRelationship(relationship)
+    {
+        this.relationships.push(relationship);
+    }
+
+    assignTag(tag)
+    {
+        this.tags.push(tag);
+    }
+}
+
+class relationship{
+    constructor(rel_name, superordinate, subordinate){
+    this.name = rel_name;
+    this.superordinate = superordinate;
+    this.subordinate = subordinate;
+    }
+}
+
+const myApp = new CI("myApp", ["new", "dumb"], ["hot", "cold"])
+
+console.log(JSON.stringify(myApp));
